@@ -1,0 +1,1635 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SD Negeri 4 Abiantuwung</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              school: {
+                50: "#eef8ff",
+                100: "#d7efff",
+                500: "#1d9bf0",
+                700: "#0d6ea8",
+              },
+            },
+          },
+        },
+      };
+    </script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      html {
+        scroll-behavior: smooth;
+      }
+      body {
+        font-family: "Inter", sans-serif;
+      }
+      .hero-slide {
+        position: absolute;
+        inset: 0;
+        opacity: 0;
+        transition: opacity 1s ease-in-out;
+      }
+      .hero-slide.active {
+        opacity: 1;
+      }
+      .scroll-snap {
+        scroll-snap-type: x mandatory;
+      }
+      .scroll-card {
+        scroll-snap-align: start;
+      }
+      .fade-in {
+        opacity: 0;
+        transform: translateY(24px);
+        transition:
+          opacity 0.7s ease,
+          transform 0.7s ease;
+      }
+      .fade-in.visible {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    </style>
+  </head>
+  <body class="bg-sky-50 text-slate-800">
+    <nav
+      class="fixed top-0 left-0 right-0 z-50 bg-white/90 backdrop-blur-md shadow-sm"
+    >
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex items-center justify-between h-16">
+          <a href="#home" class="flex items-center gap-3">
+            <div
+              class="w-11 h-11 bg-gradient-to-br text-white font-bold flex items-center justify-center"
+            >
+              <img
+                src="assets/Image/sfourtu-logo.png"
+                alt="SFOURTU"
+                class="w-full h-full object-contain"
+              />
+            </div>
+            <div>
+              <p class="text-sm font-semibold text-slate-900">SFOURTU</p>
+              <p class="text-xs text-sky-600">
+                Unggul, Berkarakter, Berkualitas & Berinovasi
+              </p>
+            </div>
+          </a>
+          <div class="hidden md:flex items-center gap-6 text-sm font-medium">
+            <a href="#tentang" class="hover:text-sky-600">Tentang</a>
+            <a href="#akses" class="hover:text-sky-600">Akses Cepat</a>
+            <a href="#program" class="hover:text-sky-600">Program</a>
+            <a href="#guru" class="hover:text-sky-600">Guru</a>
+            <a href="#komite" class="hover:text-sky-600">Pengurus Komite</a>
+            <a href="#fasilitas" class="hover:text-sky-600">Fasilitas</a>
+            <a href="#prestasi" class="hover:text-sky-600">Prestasi</a>
+            <a href="#kontak" class="hover:text-sky-600">Kontak</a>
+          </div>
+          <button
+            id="menu-toggle"
+            class="md:hidden p-2 rounded-lg hover:bg-sky-50"
+            aria-label="Buka menu"
+          >
+            <i data-lucide="menu"></i>
+          </button>
+        </div>
+        <div
+          id="mobile-menu"
+          class="hidden md:hidden pb-4 space-y-2 text-sm font-medium"
+        >
+          <a href="#tentang" class="block py-2 hover:text-sky-600">Tentang</a>
+          <a href="#akses" class="block py-2 hover:text-sky-600">Akses Cepat</a>
+          <a href="#program" class="block py-2 hover:text-sky-600">Program</a>
+          <a href="#guru" class="block py-2 hover:text-sky-600">Guru</a>
+          <a href="#komite" class="block py-2 hover:text-sky-600">Pengurus Komite</a>
+          <a href="#fasilitas" class="block py-2 hover:text-sky-600"
+            >Fasilitas</a
+          >
+          <a href="#prestasi" class="block py-2 hover:text-sky-600">Prestasi</a>
+          <a href="#kontak" class="block py-2 hover:text-sky-600">Kontak</a>
+        </div>
+      </div>
+    </nav>
+
+    <section id="home" class="relative min-h-screen overflow-hidden">
+      <div class="absolute inset-0">
+        <div class="hero-slide active">
+          <img
+            src="assets/Image/slideshow1.jpg"
+            class="w-full h-full object-cover"
+            alt="Siswa belajar di sekolah"
+          />
+        </div>
+        <div class="hero-slide">
+          <img
+            src="assets/Image/slideshow2.jpg"
+            class="w-full h-full object-cover"
+            alt="Kelas sekolah modern"
+          />
+        </div>
+        <div class="hero-slide">
+          <img
+            src="assets/Image/slideshow3.jpg"
+            class="w-full h-full object-cover"
+            alt="Aktivitas sekolah"
+          />
+        </div>
+        <div
+          class="absolute inset-0 bg-gradient-to-r from-slate-900/75 via-sky-900/45 to-slate-900/65"
+        ></div>
+      </div>
+      <div class="relative z-10 flex items-center min-h-screen">
+        <div
+          class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-white"
+        >
+          <div
+            class="mx-auto flex h-32 w-32 items-center justify-center"
+          >
+            <span class="sr-only">Sfourtu</span>
+            <img
+              src="./assets/Image/sfourtu-logo.png"
+              alt="SFOURTU"
+              class="w-19 h-19 object-contain"
+            />
+          </div>
+          <p class="mt-6 text-sm uppercase tracking-[0.4em] text-sky-100">
+            S F O U R T U
+          </p>
+          <h1
+            class="mt-4 text-2xl sm:text-5xl lg:text-6xl font-extrabold leading-tight"
+          >
+            SD Negeri 4 Abiantuwung
+          </h1>
+          <p class="mt-4 text-base sm:text-lg text-sky-50/95 max-w-3xl mx-auto">
+            URATASI
+            <span class="font-semibold"
+              >(Unggul, Berkarakter, Berkualitas dan Berinovasi)</span
+            >
+          </p>
+          <div class="mt-8 flex flex-wrap justify-center gap-3">
+            <a
+              href="#kontak"
+              class="inline-flex items-center rounded-full bg-sky-500 px-6 py-3 text-sm font-semibold text-white shadow-lg shadow-sky-500/30 hover:bg-sky-600 transition"
+              >Hubungi Kami</a
+            >
+            <a
+              href="#prestasi"
+              class="inline-flex items-center rounded-full border border-white/60 px-6 py-3 text-sm font-semibold text-white hover:bg-white/10 transition"
+              >Lihat Prestasi</a
+            >
+          </div>
+        </div>
+      </div>
+      <div class="absolute bottom-6 left-1/2 z-10 flex -translate-x-1/2 gap-2">
+        <button
+          class="hero-dot h-2.5 w-2.5 rounded-full bg-white"
+          data-slide="0"
+        ></button>
+        <button
+          class="hero-dot h-2.5 w-2.5 rounded-full bg-white/50"
+          data-slide="1"
+        ></button>
+        <button
+          class="hero-dot h-2.5 w-2.5 rounded-full bg-white/50"
+          data-slide="2"
+        ></button>
+      </div>
+    </section>
+
+    <section id="tentang" class="py-20 px-4 sm:px-6 lg:px-8 bg-white">
+      <div class="max-w-6xl mx-auto fade-in">
+        <div class="text-center max-w-3xl mx-auto">
+          <p
+            class="text-sm font-semibold uppercase tracking-[0.3em] text-sky-600"
+          >
+            Tentang Sekolah
+          </p>
+          <h2 class="mt-3 text-3xl sm:text-4xl font-bold text-slate-900">
+            Menanamkan Ilmu, Karakter, dan Semangat Belajar
+          </h2>
+        </div>
+        <div class="mt-10 grid gap-6 md:grid-cols-[1.2fr_0.8fr_0.8fr]">
+          <div class="bg-sky-50 rounded-3xl p-8 shadow-sm">
+            <h3 class="text-2xl font-bold text-slate-900">Sejarah Singkat</h3>
+            <p class="mt-4 text-slate-600 leading-relaxed">
+              SD Negeri 4 Abiantuwung atau yang akrab dikenal dengan SFOURTU merupakan sekolah dasar negeri yang berdiri sejak tahun 1978 dan telah menjadi bagian dari perjalanan pendidikan masyarakat dalam mencetak generasi penerus bangsa. Dengan semangat inovasi, penguatan pendidikan karakter, serta pelayanan terbaik, sekolah ini terus berkembang untuk menciptakan lingkungan belajar yang aman, nyaman, dan bermakna bagi murid, serta menjalin kemitraan yang harmonis dengan orang tua dan masyarakat guna mewujudkan generasi yang unggul, berkarakter, berkualitas, dan berinovasi sesuai semangat URATASI.
+            </p>
+          </div>
+          <div class="bg-white rounded-3xl p-8 border border-sky-100 shadow-sm">
+            <h3 class="text-2xl font-bold text-slate-900">Visi</h3>
+            <p class="mt-4 text-slate-600 leading-relaxed">
+              Mewujudkan sekolah yang unggul, berkarakter, berkualitas, dan
+              inovatif dalam pengembangan potensi peserta didik.
+            </p>
+          </div>
+          <div class="bg-white rounded-3xl p-8 border border-sky-100 shadow-sm">
+            <h3 class="text-2xl font-bold text-slate-900">Misi</h3>
+            <p class="mt-4 text-slate-600 leading-relaxed">
+              Menumbuhkan pembelajaran yang aktif, kreatif, dan menyenangkan,
+              serta membentuk peserta didik yang cerdas, disiplin, dan
+              bertanggung jawab.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="akses" class="py-20 px-4 sm:px-6 lg:px-8 bg-sky-50">
+      <div class="max-w-7xl mx-auto fade-in">
+        <div class="flex items-center justify-between mb-8">
+          <div>
+            <p
+              class="text-sm font-semibold uppercase tracking-[0.3em] text-sky-600"
+            >
+              Akses Cepat
+            </p>
+            <h2 class="mt-3 text-3xl font-bold text-slate-900">
+              Informasi & Kegiatan Sekolah
+            </h2>
+          </div>
+        </div>
+        <div class="relative">
+          <div
+            id="news-slider"
+            class="scroll-snap flex gap-6 overflow-x-auto pb-4"
+          >
+            <article
+              class="scroll-card min-w-[300px] max-w-[340px] bg-white rounded-3xl overflow-hidden shadow-sm border border-sky-100"
+            >
+              <img
+                src="https://images.unsplash.com/photo-1517048676732-d65bc937f952?auto=format&fit=crop&w=700&q=80"
+                class="h-52 w-full object-cover"
+                alt="Kegiatan sekolah"
+              />
+              <div class="p-5">
+                <p class="text-xs text-sky-600 font-semibold">12 Juni 2026</p>
+                <h3 class="mt-2 font-bold text-slate-900">
+                  Lomba Literasi Sekolah
+                </h3>
+                <p class="mt-2 text-sm text-slate-600">
+                  Siswa-siswi berpartisipasi dalam lomba membaca puisi dan
+                  menulis cerita.
+                </p>
+              </div>
+            </article>
+            <article
+              class="scroll-card min-w-[300px] max-w-[340px] bg-white rounded-3xl overflow-hidden shadow-sm border border-sky-100"
+            >
+              <img
+                src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?auto=format&fit=crop&w=700&q=80"
+                class="h-52 w-full object-cover"
+                alt="Kegiatan sekolah"
+              />
+              <div class="p-5">
+                <p class="text-xs text-sky-600 font-semibold">5 Juni 2026</p>
+                <h3 class="mt-2 font-bold text-slate-900">
+                  Peringatan Hari Pendidikan Nasional
+                </h3>
+                <p class="mt-2 text-sm text-slate-600">
+                  Sekolah mengadakan parade budaya, seminar, dan pentas seni.
+                </p>
+              </div>
+            </article>
+            <article
+              class="scroll-card min-w-[300px] max-w-[340px] bg-white rounded-3xl overflow-hidden shadow-sm border border-sky-100"
+            >
+              <img
+                src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&w=700&q=80"
+                class="h-52 w-full object-cover"
+                alt="Kegiatan sekolah"
+              />
+              <div class="p-5">
+                <p class="text-xs text-sky-600 font-semibold">28 Mei 2026</p>
+                <h3 class="mt-2 font-bold text-slate-900">
+                  Kegiatan Pramuka Mingguan
+                </h3>
+                <p class="mt-2 text-sm text-slate-600">
+                  Meningkatkan kedisiplinan, kerja sama, dan rasa cinta alam.
+                </p>
+              </div>
+            </article>
+            <article
+              class="scroll-card min-w-[300px] max-w-[340px] bg-white rounded-3xl overflow-hidden shadow-sm border border-sky-100"
+            >
+              <img
+                src="https://images.unsplash.com/photo-1497486751825-1233686d5d80?auto=format&fit=crop&w=700&q=80"
+                class="h-52 w-full object-cover"
+                alt="Kegiatan sekolah"
+              />
+              <div class="p-5">
+                <p class="text-xs text-sky-600 font-semibold">18 Mei 2026</p>
+                <h3 class="mt-2 font-bold text-slate-900">
+                  Workshop STEM untuk Siswa
+                </h3>
+                <p class="mt-2 text-sm text-slate-600">
+                  Siswa belajar coding sederhana dan eksperimen sains
+                  interaktif.
+                </p>
+              </div>
+            </article>
+            <article
+              class="scroll-card min-w-[300px] max-w-[340px] bg-white rounded-3xl overflow-hidden shadow-sm border border-sky-100"
+            >
+              <img
+                src="https://images.unsplash.com/photo-1544717305-2782549b5136?auto=format&fit=crop&w=700&q=80"
+                class="h-52 w-full object-cover"
+                alt="Kegiatan sekolah"
+              />
+              <div class="p-5">
+                <p class="text-xs text-sky-600 font-semibold">10 Mei 2026</p>
+                <h3 class="mt-2 font-bold text-slate-900">
+                  Penyambutan Siswa Baru
+                </h3>
+                <p class="mt-2 text-sm text-slate-600">
+                  Acara orientasi memperkenalkan budaya sekolah dan lingkungan
+                  belajar.
+                </p>
+              </div>
+            </article>
+          </div>
+          <button
+            onclick="scrollSlider('news-slider', -340)"
+            class="hidden md:flex absolute left-0 top-1/2 -translate-y-1/2 rounded-full bg-white shadow p-2"
+          >
+            <i data-lucide="chevron-left"></i>
+          </button>
+          <button
+            onclick="scrollSlider('news-slider', 340)"
+            class="hidden md:flex absolute right-0 top-1/2 -translate-y-1/2 rounded-full bg-white shadow p-2"
+          >
+            <i data-lucide="chevron-right"></i>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-20 px-4 sm:px-6 lg:px-8 bg-sky-50">
+      <div class="max-w-6xl mx-auto fade-in">
+        <div class="text-center mb-10">
+          <p
+            class="text-sm font-semibold uppercase tracking-[0.3em] text-sky-600"
+          >
+            Layanan Sekolah
+          </p>
+          <h2 class="mt-3 text-3xl font-bold text-slate-900">
+            Akses Cepat untuk Guru, Siswa, dan Orang Tua
+          </h2>
+        </div>
+        <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
+          <a href="https://docs.google.com/forms/d/e/1FAIpQLSefF3ngAtJgRY3XYy0wH5F3zG3KDyQfi0vdOPpFD-y5de0O4g/viewform?pli=1" class="bg-white rounded-3xl p-6 text-center shadow-sm transition hover:-translate-y-1 hover:shadow-md">
+            <div class="text-3xl">📖</div>
+            <p class="mt-3 font-semibold">Laporan Guru Piket</p>
+          </a>
+          <a href="https://linktr.ee/panji_widyantara.guru" class="bg-white rounded-3xl p-6 text-center shadow-sm transition hover:-translate-y-1 hover:shadow-md">
+            <div class="text-3xl">📚</div>
+            <p class="mt-3 font-semibold">E-Learning</p>
+          </a>
+          <a href="https://docs.google.com/forms/d/e/1FAIpQLSdKG0Hm12kExmoIkUy5jzw3EdbPtNNldDVl3hIoAG9TkDJ8Qg/viewform" class="bg-white rounded-3xl p-6 text-center shadow-sm transition hover:-translate-y-1 hover:shadow-md">
+            <div class="text-3xl">📕</div>
+            <p class="mt-3 font-semibold">Alur Aduan</p>
+          </a>
+          <a href="#" class="bg-white rounded-3xl p-6 text-center shadow-sm opacity-70 transition hover:-translate-y-1 hover:shadow-md">
+            <div class="text-3xl">📔</div>
+            <p class="mt-3 font-semibold">Pendaftaran Online SPMB 2026/2027</p>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-20 px-4 sm:px-6 lg:px-8 bg-white">
+      <div class="max-w-6xl mx-auto fade-in">
+        <div class="text-center mb-10">
+          <p
+            class="text-sm font-semibold uppercase tracking-[0.3em] text-sky-600"
+          >
+            Sambutan
+          </p>
+          <h2 class="mt-3 text-3xl font-bold text-slate-900">Kepala Sekolah</h2>
+        </div>
+        <div class="grid gap-8 md:grid-cols-[260px_1fr] items-center">
+          <div class="mx-auto w-64 h-64 rounded-3xl overflow-hidden shadow-xl">
+            <img
+              src="assets/Image/kepsek.jpg"
+              class="w-full h-full object-cover"
+              alt="Kepala sekolah"
+            />
+          </div>
+          <div>
+            <p class="text-lg leading-relaxed text-slate-600 italic">
+              “Selamat datang di SD Negeri 4 Abiantuwung. Kami percaya setiap
+              anak memiliki potensi luar biasa. Melalui pendidikan yang aman,
+              menyenangkan, dan berkarakter, kami menumbuhkan siswa yang cerdas,
+              mandiri, dan siap menghadapi masa depan.”
+            </p>
+            <p class="mt-6 font-bold text-slate-900">
+              Ni Nyoman Widyawati Ningsih, S.Pd.
+            </p>
+            <p class="text-sm text-sky-600">Kepala SD Negeri 4 Abiantuwung</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="program" class="py-20 px-4 sm:px-6 lg:px-8 bg-sky-50">
+      <div class="max-w-6xl mx-auto fade-in">
+        <div class="text-center mb-10">
+          <p
+            class="text-sm font-semibold uppercase tracking-[0.3em] text-sky-600"
+          >
+            Program Akademik
+          </p>
+          <h2 class="mt-3 text-3xl font-bold text-slate-900">
+            Pembelajaran Berdasarkan Fase
+          </h2>
+        </div>
+        <div class="grid gap-6 md:grid-cols-2">
+          <div class="bg-white rounded-3xl p-8 shadow-sm border border-sky-100">
+            <h3 class="text-2xl font-bold text-slate-900">
+              Fase A (Kelas 1–3)
+            </h3>
+            <p class="mt-4 text-slate-600 leading-relaxed">
+              Fokus utama pada fondasi membaca, menulis, berhitung (calistung),
+              pendidikan karakter, dan pengenalan literasi dasar untuk membangun
+              rasa percaya diri sejak awal.
+            </p>
+          </div>
+          <div class="bg-white rounded-3xl p-8 shadow-sm border border-sky-100">
+            <h3 class="text-2xl font-bold text-slate-900">
+              Fase B & C (Kelas 4–6)
+            </h3>
+            <p class="mt-4 text-slate-600 leading-relaxed">
+              Mengembangkan kemampuan berpikir kritis, pemecahan masalah,
+              literasi yang lebih kompleks, serta persiapan menghadapi asesmen
+              nasional dengan pendekatan yang menyenangkan.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-20 px-4 sm:px-6 lg:px-8 bg-white">
+      <div class="max-w-6xl mx-auto text-center fade-in">
+        <p
+          class="text-sm font-semibold uppercase tracking-[0.3em] text-sky-600"
+        >
+          Kurikulum
+        </p>
+        <h2 class="mt-3 text-3xl font-bold text-slate-900">
+          Kurikulum Merdeka Pendekatan Deep Learning
+        </h2>
+        <p class="mt-5 max-w-4xl mx-auto text-slate-600 leading-relaxed">
+          Pembelajaran mendalam (deep learning) adalah pendekatan yang
+          menekankan pemahaman konsep secara utuh, bukan sekadar menghafal.
+          Pembelajaran ini berpusat pada siswa dan didukung oleh tiga pilar
+          utama: <strong>Mindful</strong>, <strong>Meaningful</strong>, dan
+          <strong>Joyful</strong>.
+        </p>
+        <div class="mt-10 grid gap-6 md:grid-cols-3">
+          <div class="bg-sky-50 rounded-3xl p-8">
+            <div class="text-4xl mb-3">🧘</div>
+            <h3 class="font-bold text-slate-900">Mindful</h3>
+            <p class="mt-3 text-slate-600">
+              Kesadaran penuh dalam proses belajar agar siswa lebih fokus,
+              disiplin, dan siap menerima pelajaran.
+            </p>
+          </div>
+          <div class="bg-sky-50 rounded-3xl p-8">
+            <div class="text-4xl mb-3">💡</div>
+            <h3 class="font-bold text-slate-900">Meaningful</h3>
+            <p class="mt-3 text-slate-600">
+              Pembelajaran yang relevan dengan kehidupan nyata agar siswa
+              memahami makna dari setiap materi.
+            </p>
+          </div>
+          <div class="bg-sky-50 rounded-3xl p-8">
+            <div class="text-4xl mb-3">🎉</div>
+            <h3 class="font-bold text-slate-900">Joyful</h3>
+            <p class="mt-3 text-slate-600">
+              Proses belajar yang menyenangkan sehingga siswa merasa
+              termotivasi, aktif, dan senang datang ke sekolah.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="guru" class="py-20 px-4 sm:px-6 lg:px-8 bg-sky-50">
+      <div class="max-w-7xl mx-auto fade-in">
+        <div class="text-center mb-10">
+          <p
+            class="text-sm font-semibold uppercase tracking-[0.3em] text-sky-600"
+          >
+            Guru & Tenaga Pendidik
+          </p>
+          <h2 class="mt-3 text-3xl font-bold text-slate-900">
+            Para Pendamping Belajar
+          </h2>
+        </div>
+        <div class="relative">
+          <div
+            id="teacher-slider"
+            class="scroll-snap flex gap-6 overflow-x-auto pb-4"
+          >
+            <div class="scroll-card min-w-[220px] max-w-[220px] text-center">
+              <div
+                class="mx-auto h-32 w-32 overflow-hidden rounded-full border-4 border-white shadow"
+              >
+                <img
+                  src="https://images.unsplash.com/photo-1544723795-3fb6469f5b39?auto=format&fit=crop&w=300&q=80"
+                  class="h-full w-full object-cover"
+                  alt="Guru"
+                />
+              </div>
+              <p class="mt-3 font-semibold text-slate-900">
+                Bapak Panji Widyantara
+              </p>
+              <p class="mt-1 text-sm text-slate-500 italic">
+                “Setiap anak hebat butuh kesempatan untuk tumbuh.”
+              </p>
+            </div>
+            <div class="scroll-card min-w-[220px] max-w-[220px] text-center">
+              <div
+                class="mx-auto h-32 w-32 overflow-hidden rounded-full border-4 border-white shadow"
+              >
+                <img
+                  src="https://images.unsplash.com/photo-1544723795-3fb6469f5b39?auto=format&fit=crop&w=300&q=80"
+                  class="h-full w-full object-cover"
+                  alt="Guru"
+                />
+              </div>
+              <p class="mt-3 font-semibold text-slate-900">Ibu Lely</p>
+              <p class="mt-1 text-sm text-slate-500 italic">
+                “Semangat belajar bisa dimulai dari hal kecil.”
+              </p>
+            </div>
+            <div class="scroll-card min-w-[220px] max-w-[220px] text-center">
+              <div
+                class="mx-auto h-32 w-32 overflow-hidden rounded-full border-4 border-white shadow"
+              >
+                <img
+                  src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&w=300&q=80"
+                  class="h-full w-full object-cover"
+                  alt="Guru"
+                />
+              </div>
+              <p class="mt-3 font-semibold text-slate-900">Bapak Ngurah</p>
+              <p class="mt-1 text-sm text-slate-500 italic">
+                “Kejujuran dan disiplin adalah kunci masa depan.”
+              </p>
+            </div>
+            <div class="scroll-card min-w-[220px] max-w-[220px] text-center">
+              <div
+                class="mx-auto h-32 w-32 overflow-hidden rounded-full border-4 border-white shadow"
+              >
+                <img
+                  src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=300&q=80"
+                  class="h-full w-full object-cover"
+                  alt="Guru"
+                />
+              </div>
+              <p class="mt-3 font-semibold text-slate-900">Ibu Yulinda</p>
+              <p class="mt-1 text-sm text-slate-500 italic">
+                “Belajar harus membangun rasa ingin tahu.”
+              </p>
+            </div>
+            <div class="scroll-card min-w-[220px] max-w-[220px] text-center">
+              <div
+                class="mx-auto h-32 w-32 overflow-hidden rounded-full border-4 border-white shadow"
+              >
+                <img
+                  src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=300&q=80"
+                  class="h-full w-full object-cover"
+                  alt="Guru"
+                />
+              </div>
+              <p class="mt-3 font-semibold text-slate-900">Bapak Agus</p>
+              <p class="mt-1 text-sm text-slate-500 italic">
+                “Kreativitas tumbuh dari keberanian mencoba.”
+              </p>
+            </div>
+            <div class="scroll-card min-w-[220px] max-w-[220px] text-center">
+              <div
+                class="mx-auto h-32 w-32 overflow-hidden rounded-full border-4 border-white shadow"
+              >
+                <img
+                  src="https://images.unsplash.com/photo-1544723795-3fb6469f5b39?auto=format&fit=crop&w=300&q=80"
+                  class="h-full w-full object-cover"
+                  alt="Guru"
+                />
+              </div>
+              <p class="mt-3 font-semibold text-slate-900">Ibu Ari</p>
+              <p class="mt-1 text-sm text-slate-500 italic">
+                “Anak-anak belajar terbaik saat merasa aman.”
+              </p>
+            </div>
+            <div class="scroll-card min-w-[220px] max-w-[220px] text-center">
+              <div
+                class="mx-auto h-32 w-32 overflow-hidden rounded-full border-4 border-white shadow"
+              >
+                <img
+                  src="https://images.unsplash.com/photo-1504593811423-6dd665756598?auto=format&fit=crop&w=300&q=80"
+                  class="h-full w-full object-cover"
+                  alt="Guru"
+                />
+              </div>
+              <p class="mt-3 font-semibold text-slate-900">Bapak Guntur</p>
+              <p class="mt-1 text-sm text-slate-500 italic">
+                “Pendidikan yang baik adalah pendidikan yang menyentuh hati.”
+              </p>
+            </div>
+            <div class="scroll-card min-w-[220px] max-w-[220px] text-center">
+              <div
+                class="mx-auto h-32 w-32 overflow-hidden rounded-full border-4 border-white shadow"
+              >
+                <img
+                  src="https://images.unsplash.com/photo-1544723795-3fb6469f5b39?auto=format&fit=crop&w=300&q=80"
+                  class="h-full w-full object-cover"
+                  alt="Guru"
+                />
+              </div>
+              <p class="mt-3 font-semibold text-slate-900">Ibu Yuni</p>
+              <p class="mt-1 text-sm text-slate-500 italic">
+                “Setiap pertanyaan adalah awal dari penemuan.”
+              </p>
+            </div>
+            <div class="scroll-card min-w-[220px] max-w-[220px] text-center">
+              <div
+                class="mx-auto h-32 w-32 overflow-hidden rounded-full border-4 border-white shadow"
+              >
+                <img
+                  src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=300&q=80"
+                  class="h-full w-full object-cover"
+                  alt="Guru"
+                />
+              </div>
+              <p class="mt-3 font-semibold text-slate-900">Ibu Nanda</p>
+              <p class="mt-1 text-sm text-slate-500 italic">
+                “Konsistensi membangun hasil yang luar biasa.”
+              </p>
+            </div>
+            <div class="scroll-card min-w-[220px] max-w-[220px] text-center">
+              <div
+                class="mx-auto h-32 w-32 overflow-hidden rounded-full border-4 border-white shadow"
+              >
+                <img
+                  src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=300&q=80"
+                  class="h-full w-full object-cover"
+                  alt="Guru"
+                />
+              </div>
+              <p class="mt-3 font-semibold text-slate-900">Ibu Onik</p>
+              <p class="mt-1 text-sm text-slate-500 italic">
+                “Mengajar adalah menumbuhkan masa depan.”
+              </p>
+            </div>
+            <div class="scroll-card min-w-[220px] max-w-[220px] text-center">
+              <div
+                class="mx-auto h-32 w-32 overflow-hidden rounded-full border-4 border-white shadow"
+              >
+                <img
+                  src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&w=300&q=80"
+                  class="h-full w-full object-cover"
+                  alt="Guru"
+                />
+              </div>
+              <p class="mt-3 font-semibold text-slate-900">Ibu Erawati</p>
+              <p class="mt-1 text-sm text-slate-500 italic">
+                “Pendidikan sebaiknya memberi ruang untuk berkembang.”
+              </p>
+            </div>
+          </div>
+          <button
+            onclick="scrollSlider('teacher-slider', -240)"
+            class="hidden md:flex absolute left-0 top-1/2 -translate-y-1/2 rounded-full bg-white shadow p-2"
+          >
+            <i data-lucide="chevron-left"></i>
+          </button>
+          <button
+            onclick="scrollSlider('teacher-slider', 240)"
+            class="hidden md:flex absolute right-0 top-1/2 -translate-y-1/2 rounded-full bg-white shadow p-2"
+          >
+            <i data-lucide="chevron-right"></i>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <section id="komite" class="py-20 px-4 sm:px-6 lg:px-8 bg-sky-50">
+      <div class="max-w-7xl mx-auto fade-in">
+        <div class="text-center mb-10">
+          <p
+            class="text-sm font-semibold uppercase tracking-[0.3em] text-sky-600"
+          >
+            Pengurus Komite Sekolah
+          </p>
+          <h2 class="mt-3 text-3xl font-bold text-slate-900">
+            Perwakilan Orang Tua & Wali Murid
+          </h2>
+        </div>
+        <div class="relative">
+          <div
+            id="teacher-slider"
+            class="scroll-snap flex gap-6 overflow-x-auto pb-4"
+          >
+            <div class="scroll-card min-w-[220px] max-w-[220px] text-center">
+              <div
+                class="mx-auto h-32 w-32 overflow-hidden rounded-full border-4 border-white shadow"
+              >
+                <img
+                  src="https://images.unsplash.com/photo-1544723795-3fb6469f5b39?auto=format&fit=crop&w=300&q=80"
+                  class="h-full w-full object-cover"
+                  alt="Guru"
+                />
+              </div>
+              <p class="mt-3 font-semibold text-slate-900">
+                Bapak Panji Widyantara
+              </p>
+              <p class="mt-1 text-sm text-slate-500 italic">
+                “Setiap anak hebat butuh kesempatan untuk tumbuh.”
+              </p>
+            </div>
+            <div class="scroll-card min-w-[220px] max-w-[220px] text-center">
+              <div
+                class="mx-auto h-32 w-32 overflow-hidden rounded-full border-4 border-white shadow"
+              >
+                <img
+                  src="https://images.unsplash.com/photo-1544723795-3fb6469f5b39?auto=format&fit=crop&w=300&q=80"
+                  class="h-full w-full object-cover"
+                  alt="Guru"
+                />
+              </div>
+              <p class="mt-3 font-semibold text-slate-900">Ibu Lely</p>
+              <p class="mt-1 text-sm text-slate-500 italic">
+                “Semangat belajar bisa dimulai dari hal kecil.”
+              </p>
+            </div>
+            <div class="scroll-card min-w-[220px] max-w-[220px] text-center">
+              <div
+                class="mx-auto h-32 w-32 overflow-hidden rounded-full border-4 border-white shadow"
+              >
+                <img
+                  src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&w=300&q=80"
+                  class="h-full w-full object-cover"
+                  alt="Guru"
+                />
+              </div>
+              <p class="mt-3 font-semibold text-slate-900">Bapak Ngurah</p>
+              <p class="mt-1 text-sm text-slate-500 italic">
+                “Kejujuran dan disiplin adalah kunci masa depan.”
+              </p>
+            </div>
+            <div class="scroll-card min-w-[220px] max-w-[220px] text-center">
+              <div
+                class="mx-auto h-32 w-32 overflow-hidden rounded-full border-4 border-white shadow"
+              >
+                <img
+                  src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=300&q=80"
+                  class="h-full w-full object-cover"
+                  alt="Guru"
+                />
+              </div>
+              <p class="mt-3 font-semibold text-slate-900">Ibu Yulinda</p>
+              <p class="mt-1 text-sm text-slate-500 italic">
+                “Belajar harus membangun rasa ingin tahu.”
+              </p>
+            </div>
+            <div class="scroll-card min-w-[220px] max-w-[220px] text-center">
+              <div
+                class="mx-auto h-32 w-32 overflow-hidden rounded-full border-4 border-white shadow"
+              >
+                <img
+                  src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=300&q=80"
+                  class="h-full w-full object-cover"
+                  alt="Guru"
+                />
+              </div>
+              <p class="mt-3 font-semibold text-slate-900">Bapak Agus</p>
+              <p class="mt-1 text-sm text-slate-500 italic">
+                “Kreativitas tumbuh dari keberanian mencoba.”
+              </p>
+            </div>
+            <div class="scroll-card min-w-[220px] max-w-[220px] text-center">
+              <div
+                class="mx-auto h-32 w-32 overflow-hidden rounded-full border-4 border-white shadow"
+              >
+                <img
+                  src="https://images.unsplash.com/photo-1544723795-3fb6469f5b39?auto=format&fit=crop&w=300&q=80"
+                  class="h-full w-full object-cover"
+                  alt="Guru"
+                />
+              </div>
+              <p class="mt-3 font-semibold text-slate-900">Ibu Ari</p>
+              <p class="mt-1 text-sm text-slate-500 italic">
+                “Anak-anak belajar terbaik saat merasa aman.”
+              </p>
+            </div>
+            <div class="scroll-card min-w-[220px] max-w-[220px] text-center">
+              <div
+                class="mx-auto h-32 w-32 overflow-hidden rounded-full border-4 border-white shadow"
+              >
+                <img
+                  src="https://images.unsplash.com/photo-1504593811423-6dd665756598?auto=format&fit=crop&w=300&q=80"
+                  class="h-full w-full object-cover"
+                  alt="Guru"
+                />
+              </div>
+              <p class="mt-3 font-semibold text-slate-900">Bapak Guntur</p>
+              <p class="mt-1 text-sm text-slate-500 italic">
+                “Pendidikan yang baik adalah pendidikan yang menyentuh hati.”
+              </p>
+            </div>
+            <div class="scroll-card min-w-[220px] max-w-[220px] text-center">
+              <div
+                class="mx-auto h-32 w-32 overflow-hidden rounded-full border-4 border-white shadow"
+              >
+                <img
+                  src="https://images.unsplash.com/photo-1544723795-3fb6469f5b39?auto=format&fit=crop&w=300&q=80"
+                  class="h-full w-full object-cover"
+                  alt="Guru"
+                />
+              </div>
+              <p class="mt-3 font-semibold text-slate-900">Ibu Yuni</p>
+              <p class="mt-1 text-sm text-slate-500 italic">
+                “Setiap pertanyaan adalah awal dari penemuan.”
+              </p>
+            </div>
+            <div class="scroll-card min-w-[220px] max-w-[220px] text-center">
+              <div
+                class="mx-auto h-32 w-32 overflow-hidden rounded-full border-4 border-white shadow"
+              >
+                <img
+                  src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=300&q=80"
+                  class="h-full w-full object-cover"
+                  alt="Guru"
+                />
+              </div>
+              <p class="mt-3 font-semibold text-slate-900">Ibu Nanda</p>
+              <p class="mt-1 text-sm text-slate-500 italic">
+                “Konsistensi membangun hasil yang luar biasa.”
+              </p>
+            </div>
+            <div class="scroll-card min-w-[220px] max-w-[220px] text-center">
+              <div
+                class="mx-auto h-32 w-32 overflow-hidden rounded-full border-4 border-white shadow"
+              >
+                <img
+                  src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=300&q=80"
+                  class="h-full w-full object-cover"
+                  alt="Guru"
+                />
+              </div>
+              <p class="mt-3 font-semibold text-slate-900">Ibu Onik</p>
+              <p class="mt-1 text-sm text-slate-500 italic">
+                “Mengajar adalah menumbuhkan masa depan.”
+              </p>
+            </div>
+            <div class="scroll-card min-w-[220px] max-w-[220px] text-center">
+              <div
+                class="mx-auto h-32 w-32 overflow-hidden rounded-full border-4 border-white shadow"
+              >
+                <img
+                  src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&w=300&q=80"
+                  class="h-full w-full object-cover"
+                  alt="Guru"
+                />
+              </div>
+              <p class="mt-3 font-semibold text-slate-900">Ibu Erawati</p>
+              <p class="mt-1 text-sm text-slate-500 italic">
+                “Pendidikan sebaiknya memberi ruang untuk berkembang.”
+              </p>
+            </div>
+          </div>
+          <button
+            onclick="scrollSlider('teacher-slider', -240)"
+            class="hidden md:flex absolute left-0 top-1/2 -translate-y-1/2 rounded-full bg-white shadow p-2"
+          >
+            <i data-lucide="chevron-left"></i>
+          </button>
+          <button
+            onclick="scrollSlider('teacher-slider', 240)"
+            class="hidden md:flex absolute right-0 top-1/2 -translate-y-1/2 rounded-full bg-white shadow p-2"
+          >
+            <i data-lucide="chevron-right"></i>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <section id="fasilitas" class="py-20 px-4 sm:px-6 lg:px-8 bg-white">
+      <div class="max-w-7xl mx-auto fade-in">
+        <div class="text-center mb-10">
+          <p
+            class="text-sm font-semibold uppercase tracking-[0.3em] text-sky-600"
+          >
+            Fasilitas
+          </p>
+          <h2 class="mt-3 text-3xl font-bold text-slate-900">
+            Ruangan dan Sarana Belajar
+          </h2>
+        </div>
+        <div class="relative">
+          <div
+            id="facility-slider"
+            class="scroll-snap flex gap-6 overflow-x-auto pb-4"
+          >
+            <div
+              class="scroll-card min-w-[300px] max-w-[340px] bg-sky-50 rounded-3xl overflow-hidden shadow-sm"
+            >
+              <img
+                src="https://images.unsplash.com/photo-1580582932707-520aed937b7b?auto=format&fit=crop&w=700&q=80"
+                class="h-52 w-full object-cover"
+              />
+              <div class="p-5">
+                <h3 class="font-bold text-slate-900">Laboratorium Komputer</h3>
+              </div>
+            </div>
+            <div
+              class="scroll-card min-w-[300px] max-w-[340px] bg-sky-50 rounded-3xl overflow-hidden shadow-sm"
+            >
+              <img
+                src="https://images.unsplash.com/photo-1512820790803-83ca734da794?auto=format&fit=crop&w=700&q=80"
+                class="h-52 w-full object-cover"
+              />
+              <div class="p-5">
+                <h3 class="font-bold text-slate-900">Perpustakaan</h3>
+              </div>
+            </div>
+            <div
+              class="scroll-card min-w-[300px] max-w-[340px] bg-sky-50 rounded-3xl overflow-hidden shadow-sm"
+            >
+              <img
+                src="https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&w=700&q=80"
+                class="h-52 w-full object-cover"
+              />
+              <div class="p-5">
+                <h3 class="font-bold text-slate-900">Padmasana</h3>
+              </div>
+            </div>
+            <div
+              class="scroll-card min-w-[300px] max-w-[340px] bg-sky-50 rounded-3xl overflow-hidden shadow-sm"
+            >
+              <img
+                src="https://images.unsplash.com/photo-1517486808906-6ca8b3f04846?auto=format&fit=crop&w=700&q=80"
+                class="h-52 w-full object-cover"
+              />
+              <div class="p-5">
+                <h3 class="font-bold text-slate-900">Aula</h3>
+              </div>
+            </div>
+            <div
+              class="scroll-card min-w-[300px] max-w-[340px] bg-sky-50 rounded-3xl overflow-hidden shadow-sm"
+            >
+              <img
+                src="https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=700&q=80"
+                class="h-52 w-full object-cover"
+              />
+              <div class="p-5">
+                <h3 class="font-bold text-slate-900">Ruang Kelas Nyaman</h3>
+              </div>
+            </div>
+            <div
+              class="scroll-card min-w-[300px] max-w-[340px] bg-sky-50 rounded-3xl overflow-hidden shadow-sm"
+            >
+              <img
+                src="https://images.unsplash.com/photo-1547347298-4074fc3086f0?auto=format&fit=crop&w=700&q=80"
+                class="h-52 w-full object-cover"
+              />
+              <div class="p-5">
+                <h3 class="font-bold text-slate-900">Lapangan</h3>
+              </div>
+            </div>
+            <div
+              class="scroll-card min-w-[300px] max-w-[340px] bg-sky-50 rounded-3xl overflow-hidden shadow-sm"
+            >
+              <img
+                src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=700&q=80"
+                class="h-52 w-full object-cover"
+              />
+              <div class="p-5">
+                <h3 class="font-bold text-slate-900">IFP</h3>
+              </div>
+            </div>
+          </div>
+          <button
+            onclick="scrollSlider('facility-slider', -340)"
+            class="hidden md:flex absolute left-0 top-1/2 -translate-y-1/2 rounded-full bg-white shadow p-2"
+          >
+            <i data-lucide="chevron-left"></i>
+          </button>
+          <button
+            onclick="scrollSlider('facility-slider', 340)"
+            class="hidden md:flex absolute right-0 top-1/2 -translate-y-1/2 rounded-full bg-white shadow p-2"
+          >
+            <i data-lucide="chevron-right"></i>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-20 px-4 sm:px-6 lg:px-8 bg-sky-50">
+      <div class="max-w-6xl mx-auto fade-in">
+        <div class="text-center mb-10">
+          <p
+            class="text-sm font-semibold uppercase tracking-[0.3em] text-sky-600"
+          >
+            Ekstrakurikuler
+          </p>
+          <h2 class="mt-3 text-3xl font-bold text-slate-900">
+            Mengembangkan Bakat dan Minat
+          </h2>
+        </div>
+        <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
+          <div class="bg-white rounded-3xl p-6 text-center shadow-sm">
+            <div class="text-3xl">🏕️</div>
+            <p class="mt-3 font-semibold">Pramuka</p>
+          </div>
+          <div class="bg-white rounded-3xl p-6 text-center shadow-sm">
+            <div class="text-3xl">💃</div>
+            <p class="mt-3 font-semibold">Tari</p>
+          </div>
+          <div class="bg-white rounded-3xl p-6 text-center shadow-sm">
+            <div class="text-3xl">🇬🇧</div>
+            <p class="mt-3 font-semibold">Bahasa Inggris</p>
+          </div>
+          <div class="bg-white rounded-3xl p-6 text-center shadow-sm">
+            <div class="text-3xl">🥋</div>
+            <p class="mt-3 font-semibold">Karate</p>
+          </div>
+          <div class="bg-white rounded-3xl p-6 text-center shadow-sm">
+            <div class="text-3xl">💻</div>
+            <p class="mt-3 font-semibold">Ilmu Komputer</p>
+          </div>
+          <div
+            class="bg-white rounded-3xl p-6 text-center shadow-sm opacity-70"
+          >
+            <div class="text-3xl">♟️</div>
+            <p class="mt-3 font-semibold">Catur (Coming Soon)</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="prestasi" class="py-20 px-4 sm:px-6 lg:px-8 bg-white">
+      <div class="max-w-7xl mx-auto fade-in">
+        <div class="text-center mb-10">
+          <p
+            class="text-sm font-semibold uppercase tracking-[0.3em] text-sky-600"
+          >
+            Prestasi Sekolah
+          </p>
+          <h2 class="mt-3 text-3xl font-bold text-slate-900">
+            Penghargaan & Pencapaian
+          </h2>
+        </div>
+        <div class="relative">
+          <div
+            id="achievement-slider"
+            class="scroll-snap flex gap-6 overflow-x-auto pb-4"
+          >
+            <div
+              class="scroll-card min-w-[320px] max-w-[340px] bg-sky-50 rounded-3xl overflow-hidden shadow-sm"
+            >
+              <img
+                src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=700&q=80"
+                class="h-52 w-full object-cover"
+              />
+              <div class="p-5">
+                <h3 class="font-bold text-slate-900">
+                  Juara 1 Lomba Cerdas Cermat
+                </h3>
+              </div>
+            </div>
+            <div
+              class="scroll-card min-w-[320px] max-w-[340px] bg-sky-50 rounded-3xl overflow-hidden shadow-sm"
+            >
+              <img
+                src="https://images.unsplash.com/photo-1517649763962-0c623066013b?auto=format&fit=crop&w=700&q=80"
+                class="h-52 w-full object-cover"
+              />
+              <div class="p-5">
+                <h3 class="font-bold text-slate-900">
+                  Juara Festival Seni dan Budaya
+                </h3>
+              </div>
+            </div>
+            <div
+              class="scroll-card min-w-[320px] max-w-[340px] bg-sky-50 rounded-3xl overflow-hidden shadow-sm"
+            >
+              <img
+                src="https://images.unsplash.com/photo-1461896836934-ffe607ba8211?auto=format&fit=crop&w=700&q=80"
+                class="h-52 w-full object-cover"
+              />
+              <div class="p-5">
+                <h3 class="font-bold text-slate-900">
+                  Prestasi Olahraga Antar Sekolah
+                </h3>
+              </div>
+            </div>
+            <div
+              class="scroll-card min-w-[320px] max-w-[340px] bg-sky-50 rounded-3xl overflow-hidden shadow-sm"
+            >
+              <img
+                src="https://images.unsplash.com/photo-1497633762265-9d179a990aa6?auto=format&fit=crop&w=700&q=80"
+                class="h-52 w-full object-cover"
+              />
+              <div class="p-5">
+                <h3 class="font-bold text-slate-900">
+                  Penghargaan Literasi Nasional
+                </h3>
+              </div>
+            </div>
+            <div
+              class="scroll-card min-w-[320px] max-w-[340px] bg-sky-50 rounded-3xl overflow-hidden shadow-sm"
+            >
+              <img
+                src="https://images.unsplash.com/photo-1517486808906-6ca8b3f04846?auto=format&fit=crop&w=700&q=80"
+                class="h-52 w-full object-cover"
+              />
+              <div class="p-5">
+                <h3 class="font-bold text-slate-900">
+                  Juara 2 Karya Ilmiah Siswa
+                </h3>
+              </div>
+            </div>
+          </div>
+          <button
+            onclick="scrollSlider('achievement-slider', -340)"
+            class="hidden md:flex absolute left-0 top-1/2 -translate-y-1/2 rounded-full bg-white shadow p-2"
+          >
+            <i data-lucide="chevron-left"></i>
+          </button>
+          <button
+            onclick="scrollSlider('achievement-slider', 340)"
+            class="hidden md:flex absolute right-0 top-1/2 -translate-y-1/2 rounded-full bg-white shadow p-2"
+          >
+            <i data-lucide="chevron-right"></i>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-20 px-4 sm:px-6 lg:px-8 bg-sky-50">
+      <div class="max-w-6xl mx-auto fade-in">
+        <div class="text-center mb-10">
+          <p
+            class="text-sm font-semibold uppercase tracking-[0.3em] text-sky-600"
+          >
+            Testimoni
+          </p>
+          <h2 class="mt-3 text-3xl font-bold text-slate-900">
+            Apa Kata Mereka?
+          </h2>
+        </div>
+        <div class="grid gap-6 md:grid-cols-3">
+          <div class="bg-white rounded-3xl p-6 shadow-sm">
+            <div class="flex items-center gap-3">
+              <img
+                src="https://images.unsplash.com/photo-1544723795-3fb6469f5b39?auto=format&fit=crop&w=120&q=80"
+                class="h-14 w-14 rounded-full object-cover"
+              />
+              <div>
+                <p class="font-semibold">Ayu</p>
+                <p class="text-sm text-sky-600">Alumni</p>
+              </div>
+            </div>
+            <p class="mt-4 text-slate-600 italic">
+              “Di sini saya belajar bukan hanya pelajaran, tetapi juga disiplin
+              dan percaya diri.”
+            </p>
+          </div>
+          <div class="bg-white rounded-3xl p-6 shadow-sm">
+            <div class="flex items-center gap-3">
+              <img
+                src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=120&q=80"
+                class="h-14 w-14 rounded-full object-cover"
+              />
+              <div>
+                <p class="font-semibold">Dewa</p>
+                <p class="text-sm text-sky-600">Siswa Kelas 6</p>
+              </div>
+            </div>
+            <p class="mt-4 text-slate-600 italic">
+              “Saya senang belajar di sekolah yang penuh semangat, kegiatan
+              menarik, dan guru yang sabar.”
+            </p>
+          </div>
+          <div class="bg-white rounded-3xl p-6 shadow-sm">
+            <div class="flex items-center gap-3">
+              <img
+                src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=120&q=80"
+                class="h-14 w-14 rounded-full object-cover"
+              />
+              <div>
+                <p class="font-semibold">Nia</p>
+                <p class="text-sm text-sky-600">Orang Tua Murid</p>
+              </div>
+            </div>
+            <p class="mt-4 text-slate-600 italic">
+              “Anak saya berkembang sangat baik secara akademik maupun karakter
+              sejak masuk sekolah ini.”
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-20 px-4 sm:px-6 lg:px-8 bg-white">
+      <div class="max-w-7xl mx-auto fade-in">
+        <div class="text-center mb-10">
+          <p
+            class="text-sm font-semibold uppercase tracking-[0.3em] text-sky-600"
+          >
+            Galeri
+          </p>
+          <h2 class="mt-3 text-3xl font-bold text-slate-900">
+            Momen Kegiatan Sekolah
+          </h2>
+        </div>
+        <div class="relative">
+          <div
+            id="gallery-slider"
+            class="scroll-snap flex gap-6 overflow-x-auto pb-4"
+          >
+            <div
+              class="scroll-card min-w-[320px] max-w-[360px] rounded-3xl overflow-hidden shadow-sm"
+            >
+              <img
+                src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=800&q=80"
+                class="h-72 w-full object-cover"
+              />
+            </div>
+            <div
+              class="scroll-card min-w-[320px] max-w-[360px] rounded-3xl overflow-hidden shadow-sm"
+            >
+              <img
+                src="https://images.unsplash.com/photo-1497633762265-9d179a990aa6?auto=format&fit=crop&w=800&q=80"
+                class="h-72 w-full object-cover"
+              />
+            </div>
+            <div
+              class="scroll-card min-w-[320px] max-w-[360px] rounded-3xl overflow-hidden shadow-sm"
+            >
+              <img
+                src="https://images.unsplash.com/photo-1517486808906-6ca8b3f04846?auto=format&fit=crop&w=800&q=80"
+                class="h-72 w-full object-cover"
+              />
+            </div>
+            <div
+              class="scroll-card min-w-[320px] max-w-[360px] rounded-3xl overflow-hidden shadow-sm"
+            >
+              <img
+                src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&w=800&q=80"
+                class="h-72 w-full object-cover"
+              />
+            </div>
+            <div
+              class="scroll-card min-w-[320px] max-w-[360px] rounded-3xl overflow-hidden shadow-sm"
+            >
+              <img
+                src="https://images.unsplash.com/photo-1544717305-2782549b5136?auto=format&fit=crop&w=800&q=80"
+                class="h-72 w-full object-cover"
+              />
+            </div>
+          </div>
+          <button
+            onclick="scrollSlider('gallery-slider', -360)"
+            class="hidden md:flex absolute left-0 top-1/2 -translate-y-1/2 rounded-full bg-white shadow p-2"
+          >
+            <i data-lucide="chevron-left"></i>
+          </button>
+          <button
+            onclick="scrollSlider('gallery-slider', 360)"
+            class="hidden md:flex absolute right-0 top-1/2 -translate-y-1/2 rounded-full bg-white shadow p-2"
+          >
+            <i data-lucide="chevron-right"></i>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <section id="kontak" class="py-20 px-4 sm:px-6 lg:px-8 bg-sky-50">
+      <div class="max-w-6xl mx-auto fade-in">
+        <div class="text-center mb-10">
+          <p
+            class="text-sm font-semibold uppercase tracking-[0.3em] text-sky-600"
+          >
+            Hubungi Kami
+          </p>
+          <h2 class="mt-3 text-3xl font-bold text-slate-900">
+            Informasi dan Lokasi
+          </h2>
+        </div>
+        <div class="grid gap-8 lg:grid-cols-[1fr_1fr]">
+          <div class="bg-white rounded-3xl p-8 shadow-sm">
+            <div class="space-y-4 text-sm text-slate-600">
+              <div class="flex items-start gap-3">
+                <i data-lucide="map-pin" class="mt-1 text-sky-600"></i>
+                <p>
+                  Br. Suralaga, Desa Abiantuwung, Kecamatan Kediri, Kabupaten
+                  Tabanan, Bali 82121
+                </p>
+              </div>
+              <div class="flex items-center gap-3">
+                <i data-lucide="phone" class="text-sky-600"></i>
+                <p>(0361) 123-4567</p>
+              </div>
+              <div class="flex items-center gap-3">
+                <i data-lucide="mail" class="text-sky-600"></i>
+                <p>sdn4abt@gmail.com</p>
+              </div>
+              <div class="flex items-center gap-3">
+                <i data-lucide="globe" class="text-sky-600"></i>
+                <p>https://bit.ly/sdn4abt-sch-id</p>
+              </div>
+            </div>
+            <div class="mt-6 overflow-hidden rounded-2xl shadow">
+              <iframe
+                src="https://maps.google.com/maps?width=600&amp;height=400&amp;hl=en&amp;q=sd negeri 4 abiantuwung&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
+                class="w-full h-64"
+                loading="lazy"
+              ></iframe>
+            </div>
+          </div>
+          <div class="bg-white rounded-3xl p-8 shadow-sm">
+            <form id="contact-form" class="space-y-4">
+              <div>
+                <label class="block mb-1 text-sm font-medium text-slate-700"
+                  >Nama Lengkap</label
+                >
+                <input
+                  type="text"
+                  class="w-full rounded-xl border border-slate-200 px-4 py-3 focus:border-sky-400 focus:outline-none"
+                  required
+                />
+              </div>
+              <div>
+                <label class="block mb-1 text-sm font-medium text-slate-700"
+                  >Email</label
+                >
+                <input
+                  type="email"
+                  class="w-full rounded-xl border border-slate-200 px-4 py-3 focus:border-sky-400 focus:outline-none"
+                  required
+                />
+              </div>
+              <div>
+                <label class="block mb-1 text-sm font-medium text-slate-700"
+                  >Pesan</label
+                >
+                <textarea
+                  rows="5"
+                  class="w-full rounded-xl border border-slate-200 px-4 py-3 focus:border-sky-400 focus:outline-none"
+                  required
+                ></textarea>
+              </div>
+              <button
+                type="submit"
+                class="w-full rounded-xl bg-sky-500 px-5 py-3 text-sm font-semibold text-white hover:bg-sky-600 transition"
+              >
+                Kirim Pesan
+              </button>
+            </form>
+            <div
+              id="form-success"
+              class="hidden mt-4 rounded-xl bg-green-50 p-4 text-sm text-green-700"
+            >
+              Pesan berhasil dikirim. Terima kasih atas kunjungannya.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Popup Sosial Media (Modal) -->
+    <div
+      id="social-modal"
+      class="fixed inset-0 z-[100] hidden"
+      aria-labelledby="social-modal-title"
+      role="dialog"
+      aria-modal="true"
+    >
+      <div
+        class="absolute inset-0 bg-slate-900/60 backdrop-blur-sm"
+        id="social-modal-overlay"
+      ></div>
+
+      <div class="relative h-full flex items-center justify-center px-4">
+        <div
+          class="w-full max-w-lg rounded-3xl bg-white shadow-2xl border border-sky-100 overflow-hidden"
+        >
+          <!-- Header -->
+          <div class="p-6 pb-4 bg-gradient-to-br from-sky-50 to-white">
+            <div class="flex items-start justify-between gap-4">
+              <div>
+                <h2
+                  id="social-modal-title"
+                  class="text-xl font-extrabold text-slate-900"
+                >
+                  Om Swastyastu, Selamat datang di Website Resmi SD Negeri 4 Abiantuwung!
+                </h2>
+                <p class="mt-2 text-sm text-slate-600">
+                  Anda senang bersosial media?
+                  jika berkenan bantu follow akun sosial media sekolah kami, agar tidak ketinggalan informasi terbaru dari sekolah kami, Terimakasih 😊🙏🏻
+                </p>
+              </div>
+
+              <button
+                id="social-modal-close"
+                class="shrink-0 rounded-full p-2 hover:bg-sky-50 text-slate-600 hover:text-sky-700 focus:outline-none focus:ring-2 focus:ring-sky-200"
+                aria-label="Tutup popup"
+              >
+                <span class="sr-only">Tutup</span>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-5 w-5"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M6 18L18 6M6 6l12 12"
+                  />
+                </svg>
+              </button>
+            </div>
+          </div>
+
+          <!-- Body -->
+          <div class="p-6 pt-4">
+            <p class="text-sm text-slate-500 mb-4">
+              Silahkan klik tanda (x) di pojok kanan atas untuk menutup popup ini.
+            </p>
+
+            <div class="grid grid-cols-2 gap-3">
+              <a
+                href="https://youtube.com/@sdnegeri4abiantuwung961?si=mPLPINF_dU0bqfzs"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="group flex items-center justify-center gap-2 rounded-2xl border border-sky-100 bg-white hover:bg-sky-50 transition px-4 py-3"
+                aria-label="YouTube"
+              >
+                <span class="fa fa-youtube"></span>
+                <span class="font-semibold text-slate-800">Youtube</span>
+              </a>
+              <a
+                href="https://www.instagram.com/sdn4abiantuwung/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="group flex items-center justify-center gap-2 rounded-2xl border border-sky-100 bg-white hover:bg-sky-50 transition px-4 py-3"
+                aria-label="Instagram"
+              >
+                <span class="fa fa-instagram"></span>
+                <span class="font-semibold text-slate-800">Instagram</span>
+              </a>
+              <a
+                href="#"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="group flex items-center justify-center gap-2 rounded-2xl border border-sky-100 bg-white hover:bg-sky-50 transition px-4 py-3"
+                aria-label="TikTok"
+              >
+                <span class="fa fa-tiktok"></span>
+                <span class="font-semibold text-slate-800">Tiktok</span>
+              </a>
+              <a
+                href="https://www.facebook.com/p/SD-Negeri-4-Abiantuwung-100091943463892/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="group flex items-center justify-center gap-2 rounded-2xl border border-sky-100 bg-white hover:bg-sky-50 transition px-4 py-3"
+                aria-label="Facebook"
+              >
+                <span class="fa fa-facebook"></span>
+                <span class="font-semibold text-slate-800">Facebook</span>
+              </a>
+              <a
+                href="https://whatsapp.com/channel/0029Vb7DckCBFLgPrc6e521T"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="group col-span-2 flex items-center justify-center gap-2 rounded-2xl border border-emerald-100 bg-emerald-50 hover:bg-emerald-100 transition px-4 py-3"
+                aria-label="WhatsApp Channel"
+              >
+                <span class="fa fa-whatsapp"></span>
+                <span class="font-semibold text-emerald-900">Whatsapp Channel</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer class="bg-slate-900 py-8 px-4 text-center text-slate-300">
+      <p>
+        © 2026 SD Negeri 4 Abiantuwung — All rights reserved - @Panji_Widyantara
+      </p>
+    </footer>
+
+    <script>
+      const socialModal = document.getElementById("social-modal");
+      const socialModalOverlay = document.getElementById(
+        "social-modal-overlay",
+      );
+      const socialModalClose = document.getElementById(
+        "social-modal-close",
+      );
+
+      function openSocialModal() {
+        if (!socialModal) return;
+        socialModal.classList.remove("hidden");
+        document.body.style.overflow = "hidden";
+        // fokus ke tombol close agar aksesibilitas lebih baik
+        socialModalClose?.focus?.();
+      }
+
+      function closeSocialModal() {
+        if (!socialModal) return;
+        socialModal.classList.add("hidden");
+        document.body.style.overflow = "";
+      }
+
+      // open saat halaman dimuat
+      window.addEventListener("load", () => {
+        openSocialModal();
+      });
+
+      socialModalClose?.addEventListener("click", closeSocialModal);
+      socialModalOverlay?.addEventListener("click", closeSocialModal);
+
+      window.addEventListener("keydown", (e) => {
+        if (e.key === "Escape") closeSocialModal();
+      });
+
+      const slides = document.querySelectorAll(".hero-slide");
+
+      const dots = document.querySelectorAll(".hero-dot");
+      let current = 0;
+
+      function showSlide(index) {
+        slides[current].classList.remove("active");
+        dots[current].classList.replace("bg-white", "bg-white/50");
+        current = (index + slides.length) % slides.length;
+        slides[current].classList.add("active");
+        dots[current].classList.replace("bg-white/50", "bg-white");
+      }
+      setInterval(() => showSlide(current + 1), 5000);
+      dots.forEach((dot) =>
+        dot.addEventListener("click", () =>
+          showSlide(Number(dot.dataset.slide)),
+        ),
+      );
+
+      function scrollSlider(id, amount) {
+        document
+          .getElementById(id)
+          .scrollBy({ left: amount, behavior: "smooth" });
+      }
+
+      document.getElementById("menu-toggle").addEventListener("click", () => {
+        document.getElementById("mobile-menu").classList.toggle("hidden");
+      });
+      document.querySelectorAll("#mobile-menu a").forEach((link) => {
+        link.addEventListener("click", () =>
+          document.getElementById("mobile-menu").classList.add("hidden"),
+        );
+      });
+
+      document
+        .getElementById("contact-form")
+        .addEventListener("submit", (e) => {
+          e.preventDefault();
+          window.open(
+            "https://mail.google.com/mail/?view=cm&fs=1&to=sdn4abt@gmail.com",
+            "_blank"
+          );
+        });
+
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) entry.target.classList.add("visible");
+          });
+        },
+        { threshold: 0.15 },
+      );
+      document
+        .querySelectorAll(".fade-in")
+        .forEach((el) => observer.observe(el));
+
+      lucide.createIcons();
+    </script>
+  </body>
+</html>
